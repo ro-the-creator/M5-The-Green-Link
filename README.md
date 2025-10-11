@@ -4,7 +4,7 @@
 
 <img width="11520" height="4608" alt="M5-banner" src="https://github.com/user-attachments/assets/904aef7c-9b4f-4fd6-82bd-3f100a4ec0d8" />
 
-### A data-driven analysis for a LinkNYC consortium, uncovering usage patterns and energy metrics with an aim to optimize kiosk availability, improve usage efficiency, and reduce energy waste.
+### A data-driven analysis for CityBridge consortium, uncovering usage patterns and energy metrics with an aim to optimize kiosk availability, improve usage efficiency, and reduce energy waste.
 
 </div>
 
