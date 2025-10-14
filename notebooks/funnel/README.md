@@ -64,7 +64,7 @@ Next, we create a new summary table, labeled `overall`, to contain our values fo
 
 <br>
 
-From this chart, we can immediately see that 50% of weeks for kiosk usage that are flagged with poor energy usage are sessions that are only ~5 mins or below. This is a key find, indicating that quick session actually results in a higher normalized energy consumption than longer session times, as supported by this chart:
+From this chart, we can immediately see that 50% of weeks for kiosk usage that are flagged with poor energy usage are sessions that are only ~5 mins or below. This is a key find, indicating that quick sessions actually result in higher normalized energy consumption than longer session times, as supported by this chart:
 
 <br>
 
