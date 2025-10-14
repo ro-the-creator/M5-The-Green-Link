@@ -133,3 +133,65 @@ Based on the analysis and the generated plots, here are the key takeaways that d
   This indicates a very high level of network uptime and provides a strong baseline to measure against when identifying faulty kiosks.
 
 ---
+
+## Feature Engineering / KPIs
+
+After initial EDA, we were able to explore deep within the dataset to uncover more trends and concerns, especially regarding kiosk usage and energy consumption.
+
+### 1. Features / KPIs
+
+- **Activation Time:** This is a metric that can be used by the deployment team, as well as the higher ups. It gives a view of kiosks that took a long time to activate after installation, which can point to issues with infrastructure, permitting, technical issues, etc. Using this feature, the team can flag problematic kiosks and get further insight as to factors that contribute to long kiosk activation times.
+
+- **Kiosk Age:** This metric can be useful for finding the oldest running kiosks, which can be used by the maintenance team to prioritize which kiosks need attention the most. Going forward, a new column can also be created that would mark the latest maintenence date.
+
+- **Weekly Session Change (%):** This metric will be useful for doing a weekly track of session changes, and can be supported by other data sources to find factors contributing to session changes.
+
+- **Average Session Time per Week:** This can help support our weekly session change column, by showing the actually length of average session usage per week. I also included an overall calculation, to show how much LinkNYC's usage has increased since its inception.
+
+- **Energy Efficiency:** This is our key metric we want. This will help CityBridge note their energy consumption and how efficient their kiosks are really running. However, given we lack energy usage data, we will have to create an energy consumption proxy using TB uploaded/downloaded, # of sessions, and # of unique clients. 
+
+### 2. Calculations
+
+- **Activation Time:** Used timedelta to find the difference between `installation_complete` and `activation_complete`. We can sort this new column by days to find possible problematic kiosks.
+
+- **Kiosk Age:** Used timedelta again, this time to find the difference between `activation_complete` and today's date. Sorting this new column will help us find the longest running kiosks, which may be due for maintenance/repair.
+
+- **Weekly Session Change (&):** used `.diff()` and `.shift(1)` create the variables needed for a weekly change. This can be used as a KPI to find weeks of the highest/lowest change in sessions.
+
+- **Average Session Time per Week:** Required the use of `pd.to_datetime()` to first convert the object column of `avg_session_length`. Then, `.dt.hour`, `.minute`, and `.second` was all added together (with conversion calculations) to get a create a new column, `avg_session_length_seconds`. 
+
+- **Energy Efficiency:** This metric require a deeper understanding of our data. Since we lacked any energy metric, we had to create an energy proxy.
+
+This will look like:
+
+<div align='center'>
+
+Energy Efficiency = Data Usage / Energy Consumption Proxy
+
+Where...
+
+Data Usage (GB) = (TB Uploaded + TB Downloaded) * 1024
+
+AND
+
+Energy Consumption Proxy = (Sessions * 0.85) + (Unique Clients * 0.15)
+
+**Afterwards, we normalize this by dividing Energy Efficiency over the total growing Bandwidth, converted into megabytes (MB)**
+
+</div>
+
+**NOTES**
+
+- we multiply by 1024 to transform from TB to GB.
+
+- Data Usage is by week, since that is what our dataset is already aggregated by.
+
+- We add sessions by unique clients for an approximation of energy consumption. They represent our user activity load.
+    
+    - While unique clients may already be represented within, we will add both to try and approximate the higher end of our user activity load.
+
+    - For better fairness, we weigh the factors of our energy consumption proxy by only taking into account a determined percentage of them (thus, 90% of total sessions and 10% of unique users).
+
+***
+
+## At a Glance: Feature Engineering / KPIs Answers
