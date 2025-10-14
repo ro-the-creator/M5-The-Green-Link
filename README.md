@@ -153,6 +153,14 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 
 ### Ethics
 
+## Repository Navigation
+
+- [data/](./data/)
+- [notebooks/](./notebooks/)
+  - [EDA/](./notebooks/EDA/)
+  - [funnel/](./notebooks/funnel/)
+
+
 > [!NOTE]
 > This is a fictitious scenario created by the GitHub authors for academic purposes only.
 
