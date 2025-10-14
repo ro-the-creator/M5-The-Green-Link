@@ -12,6 +12,26 @@
 
 # Project Overview
 
+<br>
+
+## README Navigation
+
+**[Stakeholder](#stakeholder)**  
+ ↳ **[Business Problem](#business-problem)**  
+  ↳ **[A Quick Look](#a-quick-look)**  
+   ↳ **[Our Team](#our-team)**  
+    ↳ **[Sources](#sources)**  
+     ↳ **[Exploratory Data Analysis](#exploratory-data-analysis)**  
+      🔹 [KPIs](#kpis)  
+      🔹 [Feature Engineering](#feature-engineering)  
+      🔹 [Funnel Analysis](#funnel-analysis)  
+      🔹 [Cohort Analysis](#cohort-analysis)  
+      🔹 [RFM/ROI](#rfmroi)  
+     ↳ **[Ethics](#ethics)**  
+    ↳ **[Repository Navigation](#repository-navigation)**
+
+
+
 <div align='center'>
 
 <br>
@@ -151,7 +171,7 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 
 ### RFM/ROI
 
-### Ethics
+## Ethics
 
 ## Repository Navigation
 
