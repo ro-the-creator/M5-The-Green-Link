@@ -12,10 +12,6 @@
 
 # Project Overview
 
-<br>
-
-## README Navigation
-
 **[Stakeholder](#stakeholder)**  
  ↳ **[Business Problem](#business-problem)**  
   ↳ **[A Quick Look](#a-quick-look)**  
@@ -29,8 +25,6 @@
       🔹 [RFM/ROI](#rfmroi)  
      ↳ **[Ethics](#ethics)**  
     ↳ **[Repository Navigation](#repository-navigation)**
-
-
 
 <div align='center'>
 
