@@ -12,6 +12,20 @@
 
 # Project Overview
 
+**[Stakeholder](#stakeholder)**  
+ ↳ **[Business Problem](#business-problem)**  
+  ↳ **[A Quick Look](#a-quick-look)**  
+   ↳ **[Our Team](#our-team)**  
+    ↳ **[Sources](#sources)**  
+     ↳ **[Exploratory Data Analysis](#exploratory-data-analysis)**  
+      🔹 [KPIs](#kpis)  
+      🔹 [Feature Engineering](#feature-engineering)  
+      🔹 [Funnel Analysis](#funnel-analysis)  
+      🔹 [Cohort Analysis](#cohort-analysis)  
+      🔹 [RFM/ROI](#rfmroi)  
+     ↳ **[Ethics](#ethics)**  
+    ↳ **[Repository Navigation](#repository-navigation)**
+
 <div align='center'>
 
 <br>
@@ -62,7 +76,7 @@ Thus, we arrived to our overall question:
 <br>
 <br>
 <br>
-
+  
 (overall insights here)
 
 <br>
@@ -97,7 +111,7 @@ Hi! I'm Rolando, but I mainly like to go by Ro. I have a particular interest in 
 
 ### Kabbo Sultan
 
-My name is Kabbo Sultan, I am an AI-driven cybersecurity and data analytics professional securing businesses with data intelligence.
+My name is Kabbo Sultan, and I’m building my career at the intersection of data analytics and cybersecurity—helping businesses make smarter, safer decisions through data intelligence.
 
 [LinkedIn](https://www.linkedin.com/in/kabbosultan/) | [GitHub](https://github.com/kabbosultan)
 
@@ -119,6 +133,27 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 
 
 ## Exploratory Data Analysis
+### 1. Usage Trends & Patterns (Weekly Usage Data)
+
+**Seasonality is a Major Factor:**
+  Usage patterns show a clear seasonal trend. Wi-Fi sessions and unique clients consistently peak during the colder winter months (Jan–March) and reach their lowest points in April.
+  This insight can help in planning maintenance schedules, avoiding high-traffic periods.
+
+**Usage Quality is Stable:**
+  We created a metric for "usage quality" by calculating the average Gigabytes (GB) transferred per session.
+  The trend for this metric appears relatively stable over time, indicating consistent user behavior in terms of data consumption per connection.
+
+
+### 2. Geographic Distribution & Availability (Kiosk Locations Data)
+
+**Kiosk Distribution is Uneven:**
+  The vast majority of LinkNYC kiosks are concentrated in Manhattan.
+  Queens and Brooklyn have a moderate number, while the Bronx and Staten Island have very few.
+  This highlights a potential *digital divide* and helps prioritize maintenance in high-density areas where a single outage has a larger impact.
+
+**Network Availability is High:**
+  Over **90%** of the kiosks in the dataset are listed with an `installation_status` of “Live,” meaning they are operational.
+  This indicates a very high level of network uptime and provides a strong baseline to measure against when identifying faulty kiosks.
 
 ### KPIs
 
@@ -130,7 +165,15 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 
 ### RFM/ROI
 
-### Ethics
+## Ethics
+
+## Repository Navigation
+
+- [data/](./data/)
+- [notebooks/](./notebooks/)
+  - [EDA/](./notebooks/EDA/)
+  - [funnel/](./notebooks/funnel/)
+
 
 > [!NOTE]
 > This is a fictitious scenario created by the GitHub authors for academic purposes only.
