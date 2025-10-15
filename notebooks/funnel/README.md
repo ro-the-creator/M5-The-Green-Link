@@ -75,8 +75,39 @@ From this chart, we can immediately see that 50% of weeks for kiosk usage that a
 | Good        | 26.743889 |
 | Poor        | 5.192556  |
 
-<br>
+</div>
 
-With an overall summary table now created, we are ready to move on to visualizing the funnel.
+## 2. Visualizing The Funnel
+
+This section details the methodology and findings from our funnel analysis, which was designed to identify and quantify the most ineffecient energy usages in the dataset based on key performance metrics. The visualization was created using the `plotly` library to generate an interactive funnel chart.
+
+
+### Code Explanation
+
+The Python script uses the `plotly.graph_objects` module to create a standard funnel chart.
+
+1.  **Defining Funnel Data:** The script begins by defining a dictionary containing the three stages of our funnel and the pre-calculated number of weeks that fall into each stage. This data is then loaded into a pandas DataFrame.
+
+2.  **Creating the Funnel Object:** The core of the visualization is the `go.Figure(go.Funnel(...))` command.
+    * `y = df_funnel['step']`: This maps the names of our stages (e.g., "Total Weeks") to the Y-axis labels.
+    * `x = df_funnel['count']`: This maps the numerical counts (300, 90, 45) to the width of each funnel section.
+    * `textinfo = "value+percent initial"`: This is the most important parameter for understanding the labels on the chart.
+        * `percent initial`: The percentage that the current step's count represents relative to the **very first (initial) step**. This is why the second step shows 30% (`90 / 300`) and the third step shows 15% (`45 / 300`).
+
+3.  **Styling the Chart:** The remaining code in the `go.Funnel` call and the `fig.update_layout` section handles the visual styling, such as the colors of the bars, the connecting lines, the main title, and the fonts.
+
+---
+
+### Key Insights from the Funnel
+
+The funnel visualization provides a clear, data-driven story about network performance, leading to a powerful, actionable insight.
+
+* **Initial Filter (30% of Total):** The analysis starts with all 300 weeks in the dataset. The first filter immediately narrows this down, showing that **90 weeks (30% of the total)** qualify as having "Poor" energy efficiency. This establishes a significant baseline of underperformance.
+
+* **The Critical Insight (15% of Total):** The most important finding comes from the next step. The funnel shows that of the original 300 weeks, only **45 (or 15%)** make it to the bottom stage. These are the weeks that not only have "Poor" efficiency but *also* have extremely low user engagement (average session time < 5.5 minutes).
+
+* **The "So What" for the Stakeholder:** This analysis has successfully isolated the **45 absolute worst-performing weeks** in the dataset—the bottom 15%. The key takeaway is that the poorest network efficiency is strongly correlated with very low user engagement. This creates a clear directive for the operations team: investigate these specific 45 weeks to understand the root cause. This answers the critical question: **"Is low session time causing the poor efficiency, or is a poorly performing network causing users to disconnect quickly?"** Answering this question is the first step toward targeted operational improvements.
+
+<br>
 
 </div>
