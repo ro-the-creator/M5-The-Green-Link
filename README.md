@@ -173,6 +173,9 @@ A long activation time can signal significant bottlenecks in the deployment pipe
 
 **Business Goal:** To measure and optimize the efficiency of the kiosk deployment process, from physical installation to live operation.
 
+### Average Time From Kiosk Installation to Activation: 170 days 15:40:56
+### Almost half a year
+
 </div>
 
 <br>
@@ -184,6 +187,9 @@ As kiosks age, they become more susceptible to hardware failure and may be runni
 <div align='center'>
 
 **Business Goal:** To inform a proactive maintenance and hardware refresh strategy.
+
+### Average Age of Kiosks: 17804 days 16:29:54
+### Many long-running kiosks
 
 </div>
 
@@ -197,6 +203,9 @@ Direct energy consumption data is unavailable. To address this, we've developed 
 
 **Business Goal:** To create a standardized metric for monitoring the network's efficiency by modeling a proxy for energy consumption.
 
+### Average Energy Efficiency: 0.032958
+### Fair Energy Efficiency
+
 </div>
 <br>
 
@@ -204,7 +213,39 @@ Direct energy consumption data is unavailable. To address this, we've developed 
 
 ### Feature Engineering
 
+<div align='center'>
 
+The features we decided to implement for our analysis include many insightful columns that can be used by the maintenance, deployment, or management teams. We focused on kiosk usage, availability, and energy efficiency when creating new features. While we created many more features, the main ones include:
+
+</div>
+
+### 1. Weekly Session Change (%)
+
+This metric will be useful for doing a weekly track of session changes, and can be supported by other data sources to find factors contributing to session changes. It checks the difference in percentage of the amount of sessions each week, positive or negative changes.
+
+### 2. Average Session Time (Mins)
+
+This can help support our weekly session change column by showing the actual length of average session usage per week. I also included an overall calculation to show how much LinkNYC's usage has increased since its inception. Since our data is already aggregated by week, this was a simple feature to add, but effective in its use.
+
+### 3. Energy Efficiency
+
+This is our key metric we want. This will help CityBridge note their energy consumption and how efficient their kiosks are really running. However, given we lack energy usage data, we will have to create an energy consumption proxy using TB uploaded/downloaded, # of sessions, and # of unique clients.
+
+### 4. Energy Efficiency Rating Flag
+
+This column detects excellent, good, fair, or poor energy efficient usage weeks. This metric was calculated based on percentile thresholds, namely:
+
+- **Excellent:** Top 10%
+
+- **Good:** 60% - 90%
+
+- **Fair:** 30% - 60%
+
+- **Poor:** Bottom 30%
+
+<br>
+
+***
 
 ### Funnel Analysis
 
