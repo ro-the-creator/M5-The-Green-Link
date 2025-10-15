@@ -131,7 +131,7 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 
 - **[LinkNYC Kiosk Location Data](https://data.cityofnewyork.us/Social-Services/LinkNYC-Kiosk-Locations/s4kf-3yrf/about_data)** — From NYC OpenData
 
-
+## Insights
 ## Exploratory Data Analysis
 ### 1. Usage Trends & Patterns (Weekly Usage Data)
 
@@ -162,10 +162,71 @@ We used data provided to us by CityBridge, which included LinkNYC's weekly usage
 ### Funnel Analysis
 
 ### Cohort Analysis
+**For the Stakeholder:**
 
+Our comparative cohort analysis reveals a significant shift in the _pattern_ of user engagement since the 5G rollout in mid-2022. While overall engagement has remained stable, a new, predictable intra-month trend has emerged that presents a clear opportunity for operational and strategic optimization.
+
+**The Core Insight:**
+
+Our data consistently shows a dip in user engagement during the **second week of every month** in the post-5G era. While the first and fourth weeks remain periods of high engagement, this "Week 2 Slump" is a new, predictable pattern that we can leverage.
+
+**Actionable Recommendations:**
+
+We propose a two-pronged strategy to address this, depending on the immediate business goal:
+
+1.  **For Operational Efficiency & Cost Savings:**
+    *   **Action:** Designate the **second week of each month** as the primary window for scheduled network maintenance, software updates, and physical kiosk servicing.
+    *   **Rationale:** By performing this necessary work during a predictable period of lower user activity, you minimize service disruption, reduce the risk of impacting users during peak engagement weeks (W1 and W4), and can potentially schedule maintenance crews more efficiently.
+2.  **For Engagement Growth & Marketing:**
+    *   **Action:** Target the **second week of each month** for specific user re-engagement campaigns.
+    *   **Rationale:** Since we know engagement is likely to dip during this period, it is the ideal time to test promotions, display unique content on kiosk screens, or launch partnership offers with local businesses. This can help smooth out the monthly engagement curve and capture user attention during a time they are less active.
 ### RFM/ROI
+**For the Stakeholder:**
+
+Our comparative cohort analysis reveals a significant shift in the _pattern_ of user engagement since the 5G rollout in mid-2022. While overall engagement has remained stable, a new, predictable intra-month trend has emerged that presents a clear opportunity for operational and strategic optimization.
+
+**The Core Insight:**
+
+Our data consistently shows a dip in user engagement during the **second week of every month** in the post-5G era. While the first and fourth weeks remain periods of high engagement, this "Week 2 Slump" is a new, predictable pattern that we can leverage.
+
+**Actionable Recommendations:**
+
+We propose a two-pronged strategy to address this, depending on the immediate business goal:
+
+1.  **For Operational Efficiency & Cost Savings:**
+    *   **Action:** Designate the **second week of each month** as the primary window for scheduled network maintenance, software updates, and physical kiosk servicing.
+    *   **Rationale:** By performing this necessary work during a predictable period of lower user activity, you minimize service disruption, reduce the risk of impacting users during peak engagement weeks (W1 and W4), and can potentially schedule maintenance crews more efficiently.
+2.  **For Engagement Growth & Marketing:**
+    *   **Action:** Target the **second week of each month** for specific user re-engagement campaigns.
+    *   **Rationale:** Since we know engagement is likely to dip during this period, it is the ideal time to test promotions, display unique content on kiosk screens, or launch partnership offers with local businesses. This can help smooth out the monthly engagement curve and capture user attention during a time they are less active.
+
+### **Part 2: Energy Efficiency Segmentation**
+
+This analysis provides a strategic framework for network management by categorizing each week into one of four performance tiers based on a custom energy efficiency metric.
+
+
+1.  **Visualization & ROI:** The code generates a summary table and a horizontal bar chart showing the total number of weeks in each performance segment. This is followed by a clear, actionable ROI strategy for each tier.
+
+#### **Insights & Interpretation**
+
+The bar chart shows the historical distribution of weekly performance. By design, the "Poor," "Fair," and "Good" categories contain an equal number of weeks (90 each), while the "Excellent" category contains the top-performing 30 weeks. This quantile method is a standard statistical approach for ranking and bucketing data into performance tiers.
+
+**For the Stakeholder:** This segmentation provides a simple, data-driven calendar for operational planning:
+
+*   **Excellent Weeks:** The goal is **replication**. These periods should be studied to understand what drives peak performance (e.g., city-wide events, specific user activities).
+*   **Good Weeks:** The goal is **optimization**. These are strong weeks that could be pushed into the "Excellent" category with minor network tweaks.
+*   **Fair/Poor Weeks:** The goal is **investigation and intervention**. These weeks should trigger an operational review to diagnose the cause of the inefficiency and schedule major, disruptive maintenance to minimize user impact.
+
+### **Ethics & Equity Discussion**
+
+As part of our analysis, we must consider the ethical implications of our findings. The kiosk\_locations dataset clearly shows that the vast majority of kiosks are in Manhattan. If we optimize 
+maintenance and resources _only_ for the highest-yield areas, we risk reinforcing the digital divide and neglecting infrastructure in underserved boroughs like the Bronx and Staten Island.
+
+## Recommendations
+**Mitigation:** We recommend a dual maintenance strategy: a primary, data-driven plan for high-density areas, supplemented by a secondary, equity-focused plan that guarantees a baseline level of service and uptime for all kiosks, regardless of their current usage levels.
 
 ## Ethics
+
 
 ## Repository Navigation
 
