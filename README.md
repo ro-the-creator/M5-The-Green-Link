@@ -206,8 +206,12 @@ Direct energy consumption data is unavailable. To address this, we've developed 
 ### Average Energy Efficiency: 0.032958
 ### Fair Energy Efficiency
 
-</div>
 <br>
+
+</div>
+
+> [!NOTE]
+> More information, including the process for creating these metrics, can be found [here](./notebooks/EDA/).
 
 ***
 
@@ -244,6 +248,13 @@ This column detects excellent, good, fair, or poor energy efficient usage weeks.
 - **Poor:** Bottom 30%
 
 <br>
+
+<div align='center'>
+
+</div>
+
+> [!NOTE]
+> Similarly to the KPIs, more information regarding feature creation can be found [here](./notebooks/EDA/).
 
 ***
 
@@ -291,7 +302,12 @@ Scenarios like these are undoubtedly common in Manhattan, the most tourist-heavy
 
 NYC is the fastest city on Earth. Fast kiosk transactions aren’t just expected; they’re inevitable. The energy consumption of these fast transactions is too high a cost to continue operating this way.
 
+<br>
+
 </div>
+
+> [!NOTE]
+> More information on the funnel analysis code and visualization creation can be found [here](./notebooks/funnel/).
 
 ***
 
@@ -319,6 +335,11 @@ Our comparative cohort analysis reveals a significant shift in the _pattern_ of 
 **The Core Insight:**
 
 Our data consistently shows a dip in user engagement during the **second week of every month** in the post-5G era. While the first and fourth weeks remain periods of high engagement, this "Week 2 Slump" is a new, predictable pattern that we can leverage.
+
+<br>
+
+> [!NOTE]
+> The cohort creation, including coding and visualizing, can be found [here](./notebooks/cohort&segment_RFM).
 
 ***
 
@@ -352,7 +373,14 @@ Our data consistently shows a dip in user engagement during the **second week of
     
    **Proposed Mitigation:** We strongly recommend a **dual maintenance strategy**. While the data-driven recommendations above should be applied to high-density areas, a separate, equity-focused plan must be in place to guarantee a baseline level of service and reliable uptime for kiosks in underserved boroughs. This ensures that all New Yorkers benefit from the LinkNYC network.
 
+<br>
+
 </div>
+
+> [!NOTE]
+>  For a deeper dive into the RFM/ROI process, check out the [documentation](./notebooks/cohort&segment_RFM).
+
+
 
 <br>
 
@@ -408,6 +436,7 @@ As part of our analysis, we also must consider the ethical implications of our f
   - [funnel](./notebooks/funnel/)
   - [cohort&segment_RFM](./notebooks/cohort&segment_RFM)
 
+<br>
 
 > [!NOTE]
 > This is a fictitious scenario created by the GitHub authors for academic purposes only.
