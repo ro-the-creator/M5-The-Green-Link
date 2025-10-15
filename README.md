@@ -402,10 +402,10 @@ As part of our analysis, we also must consider the ethical implications of our f
 ## Repository Navigation
 
 - [charts](./charts/)
-- [data/](./data/)
-- [notebooks/](./notebooks/)
-  - [EDA/](./notebooks/EDA/)
-  - [funnel/](./notebooks/funnel/)
+- [data](./data/)
+- [notebooks](./notebooks/)
+  - [EDA](./notebooks/EDA/)
+  - [funnel](./notebooks/funnel/)
   - [cohort&segment_RFM](./notebooks/cohort&segment_RFM)
 
 
