@@ -138,19 +138,8 @@ Based on the analysis and the generated plots, here are the key takeaways that d
 
 After initial EDA, we were able to explore deep within the dataset to uncover more trends and concerns, especially regarding kiosk usage and energy consumption.
 
-### 1. Features / KPIs
 
-- **Activation Time:** This is a metric that can be used by the deployment team, as well as the higher ups. It gives a view of kiosks that took a long time to activate after installation, which can point to issues with infrastructure, permitting, technical issues, etc. Using this feature, the team can flag problematic kiosks and get further insight as to factors that contribute to long kiosk activation times.
-
-- **Kiosk Age:** This metric can be useful for finding the oldest running kiosks, which can be used by the maintenance team to prioritize which kiosks need attention the most. Going forward, a new column can also be created that would mark the latest maintenence date.
-
-- **Weekly Session Change (%):** This metric will be useful for doing a weekly track of session changes, and can be supported by other data sources to find factors contributing to session changes.
-
-- **Average Session Time per Week:** This can help support our weekly session change column, by showing the actually length of average session usage per week. I also included an overall calculation, to show how much LinkNYC's usage has increased since its inception.
-
-- **Energy Efficiency:** This is our key metric we want. This will help CityBridge note their energy consumption and how efficient their kiosks are really running. However, given we lack energy usage data, we will have to create an energy consumption proxy using TB uploaded/downloaded, # of sessions, and # of unique clients. 
-
-### 2. Calculations
+### 1. Calculations
 
 - **Activation Time:** Used timedelta to find the difference between `installation_complete` and `activation_complete`. We can sort this new column by days to find possible problematic kiosks.
 
@@ -194,4 +183,98 @@ Energy Consumption Proxy = (Sessions * 0.85) + (Unique Clients * 0.15)
 
 ***
 
-## At a Glance: Feature Engineering / KPIs Answers
+<br>
+
+# At a Glance: Feature Engineering / KPIs Answers
+
+## KPIs
+
+### 1. Average Activation Time
+  - **Business Goal:** To measure and optimize the efficiency of the kiosk deployment process, from physical installation to live operation.
+  - **Justification:** A long activation time can signal significant bottlenecks in the deployment pipeline, such as infrastructure challenges, permitting delays, or technical issues. By tracking the average activation time, the operations team can establish a baseline, identify outliers, and investigate the root causes of delays. This KPI is crucial for streamlining the rollout of new kiosks and improving the speed to market.
+
+- **Implementation Logic:**
+  - **Data Source:** kiosk_locations dataset.
+  - **Calculation:** For each kiosk, calculate Activation Time = avg.activation_complete - avg.installation_complete.
+
+
+- **KPI:** The average of the Activation Time across all "Live" kiosks. This can be further segmented by borough or planned_kiosk_type to identify specific problem areas.
+
+<div align='center'>
+
+### Average Time From Kiosk Installation to Activation: 170 days 15:40:55.790363482
+
+</div>
+
+### 2. Average Kiosk Age
+- **Business Goal:** To inform a proactive maintenance and hardware refresh strategy.
+- **Justification:** As kiosks age, they become more susceptible to hardware failure and may be running on older, less efficient technology. Tracking the average age of the "Live" kiosks in the network allows the maintenance team to forecast potential issues and prioritize inspections or upgrades for the oldest units. This shifts the team from a reactive to a proactive maintenance model, minimizing downtime and ensuring a consistent user experience.
+
+- **Implementation Logic:**
+  - **Data Source:** kiosk_locations dataset.
+  - **Calculation:** For each "Live" kiosk, calculate Kiosk Age = Current Date - activation_complete.
+
+- **KPI:** The average of the Kiosk Age across all "Live" kiosks. This metric should be monitored over time to understand the overall aging of the network's infrastructure.
+
+<div align='center'>
+
+### Average Age of Kiosks: 17804 days 16:29:53.859173120
+
+</div>
+
+### 3. Network Energy Efficiency
+- **Business Goal:** To create a standardized metric for monitoring the network's efficiency by modeling a proxy for energy consumption.
+- **Justification:** Direct energy consumption data is unavailable. To address this, we've developed a proxy that models energy usage based on user activity load (sessions and unique clients). By comparing the data delivered (value) to the modeled energy consumed (cost proxy), we can create a powerful efficiency score. Tracking this KPI is essential for financial forecasting, promoting sustainability, and making data-driven decisions about hardware deployment.
+- **Implementation Logic:**
+  - **Data Source:** weekly_usage dataset.
+  - **Calculation (Multi-step):**
+    - **Calculate Data Usage (GB):** (tb_downloaded + tb_uploaded) * 1024
+    - **Calculate Energy Consumption Proxy:** (sessions * 0.85) + (unique_clients * 0.15)
+    - **Calculate Initial Efficiency Score:** Data Usage (GB) / Energy Consumption Proxy
+    - **Normalize the Score:** Divide the Initial Efficiency Score by the cumulative_bandwidth_tb (converted to MB) to get a final KPI that accounts for network growth.
+
+- **KPI:** Dimensionless data transfer per session. Higher is good.
+
+<div align='center'>
+
+### Average Energy Efficiency: 0.032958
+
+</div>
+
+  <br>
+
+## Feature Engineering
+
+Our feature engineering included a variety of views into the data. Some of them also spawned KPIs, though they are generally well used throughout the analysis of the project.
+
+### 1. Activation Time
+
+This is a metric that can be used by the deployment team, as well as the higher ups. It gives a view of kiosks that took a long time to activate after installation, which can point to issues with infrastructure, permitting, technical issues, etc. Using this feature, the team can flag problematic kiosks and get further insight as to factors that contribute to long kiosk activation times.
+
+### 2. Kiosk Age
+
+This metric can be useful for finding the oldest running kiosks, which can be used by the maintenance team to prioritize which kiosks need attention the most. Going forward, a new column can also be created that would mark the latest maintenence date.
+
+### 3. Weekly Session Change (%)
+
+This metric will be useful for doing a weekly track of session changes, and can be supported by other data sources to find factors contributing to session changes. It checks the difference in percentage of the amount of sessions each week, positive or negative changes.
+
+### 4. Average Session Time (Mins)
+
+This can help support our weekly session change column, by showing the actually length of average session usage per week. I also included an overall calculation, to show how much LinkNYC's usage has increased since its inception. Since our data is already aggregated by week, this was a simply feature to add, but effective in its use.
+
+### 5. Energy Efficiency
+
+This is our key metric we want. This will help CityBridge note their energy consumption and how efficient their kiosks are really running. However, given we lack energy usage data, we will have to create an energy consumption proxy using TB uploaded/downloaded, # of sessions, and # of unique clients.
+
+### 6. Energy Efficiency Rating Flag
+
+This column detects excellent, good, fair, or poor energy efficient usage weeks. This metric was calculated based on percentile thresholds, namely:
+
+- **Excellent:** Top 10%
+
+- **Good:** 60% - 90%
+
+- **Fair:** 30% - 60%
+
+- **Poor:** Bottom 30%
