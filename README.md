@@ -254,12 +254,14 @@ NYC is the fastest city on Earth. Fast kiosk transactions aren’t just expected
 
 #### Pre-5G
 
-<img width="1189" height="919" alt="output" src="https://github.com/user-attachments/assets/f45642da-7955-4b06-a040-dae2a5f6e8b7" />
+<img width="740" height="568" alt="pre-5G" src="https://github.com/user-attachments/assets/f9c06a4c-3fb4-42ba-853e-4cd0de4671d0" />
+
 
 
 #### Post-5G
 
-<img width="1189" height="1160" alt="post-output" src="https://github.com/user-attachments/assets/bc9656ec-f156-4577-ae67-43e952863ff8" />
+<img width="740" height="722" alt="post-5G" src="https://github.com/user-attachments/assets/fbc16e36-5267-4fc2-bb3c-8767ec22771b" />
+
 
 </div>
 
