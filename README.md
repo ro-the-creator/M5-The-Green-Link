@@ -287,19 +287,23 @@ Our data consistently shows a dip in user engagement during the **second week of
 
 <br>
 
-Our comparative cohort and segmentation analyses uncover key behavioral and operational patterns in LinkNYC’s weekly usage data following the 5G rollout. The findings highlight both engagement dynamics and network performance opportunities that can directly inform strategic planning.
+   By engineering a custom **energy efficiency metric**, we segmented all historical weeks into four performance tiers: "Poor," "Fair," "Good," and "Excellent." This provides a simple framework for managing the network.
     
-**The Core Insight:**
-User engagement patterns have evolved since mid-2022, showing a **predictable intra-month rhythm**. While overall activity levels remain steady, engagement now **dips consistently during the second week** of each month. The first and fourth weeks continue to perform strongest, marking a clear opportunity for scheduling and optimization.
+   **Insight:** This segmentation provides a historical performance distribution, allowing for a more nuanced approach than a simple "peak vs. off-peak" model.
     
-**Operational Implication:**
-This “Week 2 Slump” offers a window for **low-impact maintenance** and **targeted re-engagement campaigns**. Maintenance performed during this lull minimizes user disruption, while marketing or community initiatives can be timed to lift engagement during slower periods.
+   **Recommendation:** Implement a tiered ROI strategy:
     
-*   **Network Efficiency Insight:**
-Weekly network performance can be effectively segmented into **four tiers — Poor, Fair, Good, and Excellent —** based on a custom energy efficiency metric. This quantile-based framework enables LinkNYC to pinpoint high-performing weeks for replication and low-performing periods for focused intervention.
+  **Excellent Weeks (Top 10%):** The goal is **replication**. Analyze these periods to understand what drives peak performance.
+  
+  **Good Weeks:** The goal is **optimization**. Make small tweaks to push these weeks into the "Excellent" category.
+  
+  **Fair/Poor Weeks (Bottom 60%):** The goal is **investigation and intervention**. Use these periods to diagnose inefficiency and schedule major, disruptive maintenance to save costs and minimize user impact.
+        
+   **Ethics & Equity Consideration**
     
-*   **Equity Consideration:**
-The analysis also reveals geographic imbalance in kiosk distribution, with a concentration in Manhattan. To ensure fairness and accessibility, we recommend a **dual maintenance strategy** — combining data-driven optimization for high-traffic areas with an **equity-focused baseline** for underserved boroughs such as the Bronx and Staten Island.
+   Our analysis confirms that LinkNYC kiosks are overwhelmingly concentrated in Manhattan. Optimizing operations solely based on high-usage data risks reinforcing this **digital divide**.
+    
+   **Proposed Mitigation:** We strongly recommend a **dual maintenance strategy**. While the data-driven recommendations above should be applied to high-density areas, a separate, equity-focused plan must be in place to guarantee a baseline level of service and reliable uptime for kiosks in underserved boroughs. This ensures that all New Yorkers benefit from the LinkNYC network.
 
 </div>
 
