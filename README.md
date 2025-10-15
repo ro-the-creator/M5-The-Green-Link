@@ -287,15 +287,19 @@ Our data consistently shows a dip in user engagement during the **second week of
 
 <br>
 
-Our comparative cohort analysis reveals a significant shift in the _pattern_ of user engagement since the 5G rollout in mid-2022. While overall engagement has remained stable, a new, predictable intra-month trend has emerged that presents a clear opportunity for operational and strategic optimization.
-
-</div>
-
-<div align='center'>
-
+Our comparative cohort and segmentation analyses uncover key behavioral and operational patterns in LinkNYC’s weekly usage data following the 5G rollout. The findings highlight both engagement dynamics and network performance opportunities that can directly inform strategic planning.
+    
 **The Core Insight:**
-
-Our data consistently shows a dip in user engagement during the **second week of every month** in the post-5G era. While the first and fourth weeks remain periods of high engagement, this "Week 2 Slump" is a new, predictable pattern that we can leverage.
+User engagement patterns have evolved since mid-2022, showing a **predictable intra-month rhythm**. While overall activity levels remain steady, engagement now **dips consistently during the second week** of each month. The first and fourth weeks continue to perform strongest, marking a clear opportunity for scheduling and optimization.
+    
+**Operational Implication:**
+This “Week 2 Slump” offers a window for **low-impact maintenance** and **targeted re-engagement campaigns**. Maintenance performed during this lull minimizes user disruption, while marketing or community initiatives can be timed to lift engagement during slower periods.
+    
+*   **Network Efficiency Insight:**
+Weekly network performance can be effectively segmented into **four tiers — Poor, Fair, Good, and Excellent —** based on a custom energy efficiency metric. This quantile-based framework enables LinkNYC to pinpoint high-performing weeks for replication and low-performing periods for focused intervention.
+    
+*   **Equity Consideration:**
+The analysis also reveals geographic imbalance in kiosk distribution, with a concentration in Manhattan. To ensure fairness and accessibility, we recommend a **dual maintenance strategy** — combining data-driven optimization for high-traffic areas with an **equity-focused baseline** for underserved boroughs such as the Bronx and Staten Island.
 
 </div>
 
