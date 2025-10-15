@@ -27,6 +27,7 @@ This analysis was designed to measure the impact of a significant network event 
 The output from this analysis tells a clear and powerful "before and after" story:
 
 *   **Pre-5G Heatmap:** This chart shows consistent user engagement. "High engagement" weeks are not rare and follow a predictable pattern. The retention tables for this period show a high probability of the 1st and 4th week being a high-performer.
+
 | Week | Retention Rate (%)  |
 |:-----|--------------------:|
 | W1   | 25.81               |
@@ -35,6 +36,7 @@ The output from this analysis tells a clear and powerful "before and after" stor
 | W4   | 25.81               |
 
 *   **Post-5G Heatmap:** This chart shows a  change in engagement. After the 5G rollout, user engagement becomes sporadic. The 1st and 4th weeks are still "high engagement," as indicated by the solid blocks of yellows in the heatmap and the 3rd week has a build up towards the 4th week. The 2nd week has the lowest engaement. The retention tables confirm this:
+
 | Week | Retention Rate (%)  |
 |:-----|--------------------:|
 | W1   | 25.64               |
