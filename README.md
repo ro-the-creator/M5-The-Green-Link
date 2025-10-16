@@ -68,23 +68,36 @@ Thus, we arrived to our overall question:
 </div>
 
 ## A Quick Look
+
 <div align='center'>
+
+<br>
 
 Our analysis produced two primary strategic insights, leading to a set of actionable recommendations for the LinkNYC Consortium.
 
-**The "Week 2 Slump": A New Operational Pattern**
+### **The "Week 2 Slump": A New Operational Pattern**
+
+</div>
 
 **Insight**: A comparative cohort analysis revealed a predictable dip in user engagement during the second week of every month since the 5G rollout.
 
 **Recommendation**: Leverage this slump for either operational efficiency (by scheduling maintenance) or marketing growth (by launching re-engagement campaigns).
 
-**A Tiered Strategy for Energy Efficiency**
+<div align='center'>
+
+### **A Tiered Strategy for Energy Efficiency**
+
+</div>
 
 **Insight**: By creating a custom energy efficiency metric, we segmented all historical weeks into four performance tiers: "Poor," "Fair," "Good," and "Excellent."
 
 **Recommendation**: Implement a tiered ROI strategy: replicate conditions of "Excellent" weeks, optimize "Good" weeks to improve performance, and investigate "Fair/Poor" weeks to diagnose issues and schedule disruptive maintenance.
 
-**Ethics & Equity Consideration**
+<div align='center'>
+
+### **Ethics & Equity Consideration**
+
+</div>
 
 **Insight**: Our analysis confirmed that LinkNYC kiosks are overwhelmingly concentrated in Manhattan, creating a digital divide.
 
