@@ -63,7 +63,7 @@ Our team had several factors that we wanted to explore, including kiosk availabi
 
 Thus, we arrived to our overall question: 
 
-**How can LinkNYC optimize kiosk availability and usage efficiency across boroughs while minimizing energy waste?**
+**How can LinkNYC optimize kiosk service and usage distribution across boroughs while minimizing energy waste?**
 
 </div>
 
