@@ -201,7 +201,7 @@ As kiosks age, they become more susceptible to hardware failure and may be runni
 
 **Business Goal:** To inform a proactive maintenance and hardware refresh strategy.
 
-### Average Age of Kiosks: 17804 days 16:29:54
+### Average Age of Kiosks: 2636 days
 ### Many long-running kiosks
 
 </div>
